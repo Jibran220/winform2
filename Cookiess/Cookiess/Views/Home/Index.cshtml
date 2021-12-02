@@ -1,0 +1,24 @@
+﻿@model Cookiess.Models.user
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>@Html.LabelFor(model => model.name)</td>
+        <td>@Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.name )
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" name="name" value="Submit" class="btn-group-justified" />
+        </td>
+    </tr>
+</table>
+}
